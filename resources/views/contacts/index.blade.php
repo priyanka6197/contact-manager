@@ -1,14 +1,15 @@
-<?php
 @extends('layouts.app')
 
 @section('content')
 <h2>Contacts List</h2>
 <a href="/contacts/create">Add New Contact</a>
+
 <form action="/contacts/import" method="post" enctype="multipart/form-data">
     @csrf
     <input type="file" name="xml_file" required>
     <button type="submit">Import XML</button>
 </form>
+
 <table>
     <tr>
         <th>Name</th>
